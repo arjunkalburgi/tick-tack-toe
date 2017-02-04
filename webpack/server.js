@@ -9,7 +9,11 @@ module.exports = {
     'webpack/hot/only-dev-server',
     ...common.entry
   ],
-  output: common.output,
+  output: {
+    path: common.output.path,
+    publicPath: common.output.publicPath,
+    filename: '[name].[hash].js'
+  },
   resolve: common.resolve,
   context: common.context,
   devtool: 'inline-source-map',
