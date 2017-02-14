@@ -1,3 +1,4 @@
+/// <reference path="./typings.d.ts"/>
 import './polyfills';
 
 import { createElement } from 'react';
