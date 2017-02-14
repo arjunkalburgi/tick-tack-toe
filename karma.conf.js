@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const build = require('./webpack/build');
+const build = require('./webpack/webpack.config.prod');
 
 module.exports = (config) => {
   config.set({

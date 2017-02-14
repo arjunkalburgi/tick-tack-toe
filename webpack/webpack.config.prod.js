@@ -1,4 +1,4 @@
-const common = require('./common');
+const common = require('./webpack.config.common');
 const { resolve } = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
