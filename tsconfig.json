@@ -1,19 +1,15 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "jsx": "react",
-        "jsxFactory": "createElement",
-        "sourceMap": true,
-        "lib": [
-            "es5",
-            "dom",
-            "es2015.promise"
-        ]
-    },
-    "include": [
-        "src/**/*"
-    ]
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "jsx": "react",
+    "jsxFactory": "createElement",
+    "sourceMap": true
+  },
+  "include": [
+    "src/**/*"
+  ]
 }

@@ -26,7 +26,7 @@ module.exports = {
     rules: [{
       test: /\.tsx?$/,
       use: [
-        'react-hot-loader/webpack',
+        'babel-loader',
         'awesome-typescript-loader'
       ],
       exclude: /node_modules/
