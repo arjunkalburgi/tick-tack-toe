@@ -4,8 +4,8 @@ import { createElement } from 'react';
 import { render } from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
-import { store } from './store/store'; 
-import { connect, Provider } from 'react-redux';
+import { store } from './store'; 
+import { Provider } from 'react-redux';
 
 import { App } from './components/App/App';
 
