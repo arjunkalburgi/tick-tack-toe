@@ -11,5 +11,7 @@
 
 .row .col {
   width: 33.33%; 
-  padding-top: 33.33%
+  padding-top: 33.33%; 
+  background-color: gray; 
+  border-style: solid; 
 }

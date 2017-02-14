@@ -1,5 +1,6 @@
 import {createElement, Component} from 'react';
 import './board.css'; 
+import {BoardRow} from './boardrow'; 
 import {Player, GameState} from '../../store'; 
 import { connect } from 'react-redux';
 
@@ -9,33 +10,22 @@ interface BoardProps {
 
 export class Board extends Component<BoardProps,{}> {
     render() {
+        console.log(this.props); 
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col">{this.props.board[0][0]}</div>
-                    <div className="col">{this.props.board[0][1]}</div>
-                    <div className="col">{this.props.board[0][2]}</div>
-                </div>
-                <div className="row">
-                    <div className="col">{this.props.board[1][0]}</div>
-                    <div className="col">{this.props.board[1][1]}</div>
-                    <div className="col">{this.props.board[1][2]}</div>
-                </div>
-                <div className="row">
-                    <div className="col">{this.props.board[2][0]}</div>
-                    <div className="col">{this.props.board[2][1]}</div>
-                    <div className="col">{this.props.board[2][2]}</div>
-                </div>
+                <BoardRow boardRow={this.props.board[0]} />
+                <BoardRow boardRow={this.props.board[1]} />
+                <BoardRow boardRow={this.props.board[2]} />
             </div>
         )
     }
 }
 
 // mapping Board Props and State board 
-function mapStateToBoardProps(state:GameState, ownProp:BoardProps) {
-    return {
-        board: state.board
-    }
-}
-let boardFactory = connect(() => mapStateToBoardProps, {});
-export let ConnectedBoard = boardFactory(Board);
+// function mapStateToBoardProps(state:GameState, ownProp:BoardProps) {
+//     return {
+//         board: state.board
+//     }
+// }
+// let boardFactory = connect(mapStateToBoardProps);
+// export let ConnectedBoard = boardFactory(Board);
