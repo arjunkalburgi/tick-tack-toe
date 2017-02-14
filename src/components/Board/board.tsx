@@ -21,11 +21,10 @@ export class Board extends Component<BoardProps,{}> {
     }
 }
 
-// mapping Board Props and State board 
-// function mapStateToBoardProps(state:GameState, ownProp:BoardProps) {
-//     return {
-//         board: state.board
-//     }
-// }
-// let boardFactory = connect(mapStateToBoardProps);
-// export let ConnectedBoard = boardFactory(Board);
+//mapping Board Props and State board 
+function mapStateToBoardProps(state:GameState, ownProp:BoardProps) {
+    return {
+        board: state.board
+    }
+}
+export let ConnectedBoard = connect<BoardProps, {}, {}>(mapStateToBoardProps)(Board);
