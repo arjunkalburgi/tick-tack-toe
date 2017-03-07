@@ -28,7 +28,9 @@ interface BoardRowExtra {
 export class BoardRow extends Component<BoardRowProps,{}> {
     foo(index: number) {
       console.log("hi from foo");
-      this.props.play(this.props.row, index, this.props.turn)
+      if (this.props.turn === Player.USER) {
+        this.props.play(this.props.row, index, this.props.turn)
+      }
     }
     render() {
         return (
