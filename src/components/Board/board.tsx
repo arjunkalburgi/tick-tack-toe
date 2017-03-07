@@ -13,9 +13,9 @@ export class Board extends Component<BoardProps,{}> {
         console.log(this.props); 
         return (
             <div className="container">
-                <ConnectedBoardRow boardRow={this.props.board[0]} row={0} />
-                <ConnectedBoardRow boardRow={this.props.board[1]} row={1} />
-                <ConnectedBoardRow boardRow={this.props.board[2]} row={2} />
+                <ConnectedBoardRow row={0} />
+                <ConnectedBoardRow row={1} />
+                <ConnectedBoardRow row={2} />
             </div>
         )
     }
