@@ -1,6 +1,6 @@
 import {createElement, Component} from 'react';
 import './board.css'; 
-import {BoardRow} from './boardrow'; 
+import {ConnectedBoardRow} from './boardrow'; 
 import {Player, GameState} from '../../store'; 
 import { connect } from 'react-redux';
 
@@ -13,9 +13,9 @@ export class Board extends Component<BoardProps,{}> {
         console.log(this.props); 
         return (
             <div className="container">
-                <BoardRow boardRow={this.props.board[0]} />
-                <BoardRow boardRow={this.props.board[1]} />
-                <BoardRow boardRow={this.props.board[2]} />
+                <ConnectedBoardRow boardRow={this.props.board[0]} row={0} />
+                <ConnectedBoardRow boardRow={this.props.board[1]} row={1} />
+                <ConnectedBoardRow boardRow={this.props.board[2]} row={2} />
             </div>
         )
     }
