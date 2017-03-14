@@ -10,7 +10,7 @@ export interface BoardAction extends Action {
 
 export function boardReducer(state: Array<Array<Player>> = [[],[],[]], action: BoardAction): Array<Array<Player>> {
 	console.log("dispatched"); 
-  if (action.type == CLEARBOARD) {
+	if (action.type == CLEARBOARD) {
 		return [[],[],[]];
 	}
 	if (action.type == UPDATEBOARD) {
