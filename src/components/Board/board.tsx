@@ -1,6 +1,7 @@
 import {createElement, Component} from 'react';
 import './board.css'; 
 import {ConnectedBoardRow} from './boardrow'; 
+import {ConnectedAI} from '../AI/AI'; 
 import {Player, GameState} from '../../store'; 
 import { connect } from 'react-redux';
 
@@ -16,6 +17,7 @@ export class Board extends Component<BoardProps,{}> {
                 <ConnectedBoardRow row={0} />
                 <ConnectedBoardRow row={1} />
                 <ConnectedBoardRow row={2} />
+                <ConnectedAI />
             </div>
         )
     }

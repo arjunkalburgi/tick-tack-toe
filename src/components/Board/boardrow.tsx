@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux'; 
 
 interface BoardRowProps {
-    boardRow: Array<Player>;
-    row: number;  
-    play: (row: number, col: number, player: Player) => void; 
-    turn: Player; 
+	boardRow: Array<Player>;
+	row: number;  
+	play: (row: number, col: number, player: Player) => void; 
+	turn: Player; 
 }
 
 interface BoardRowInterface {
@@ -44,14 +44,14 @@ export class BoardRow extends Component<BoardRowProps,{}> {
 }
 
 function mapStateToBoardProps(state:GameState, ownProp:BoardRowProps) {
-    return {
-        boardRow: state.board[ownProp.row],
-        turn: state.turn
-    }
+	return {
+		boardRow: state.board[ownProp.row],
+		turn: state.turn
+	}
 }
 function mapDispatchToBoardProps(dispatch: Dispatch<GameState>, ownProp: BoardRowProps) {
-    return {
-        play: (row: number, col: number, player: Player) => dispatch({ type: UPDATEBOARD, payload: {row, col, player} })
-    }
+	return {
+		play: (row: number, col: number, player: Player) => dispatch({ type: UPDATEBOARD, payload: {row, col, player} })
+	}
 }
 export let ConnectedBoardRow = connect<BoardRowInterface, BoardRowDispatch, BoardRowExtra>(mapStateToBoardProps, mapDispatchToBoardProps)(BoardRow);
